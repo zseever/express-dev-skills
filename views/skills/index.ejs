@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express To-Do</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Skills</h1>
+    <ul>
+      <% skills.forEach(function(t) { %>
+        <li>
+          <a href="/skills/<%= t.id %>"><%= t.desc %></a>
+
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+
+</html>
