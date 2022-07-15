@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Skill #<%= skill.id%></h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+      <p>Skill: <input type="text" name="desc" value="<%= skill.desc %>" autocomplete="off"> </p>
+      <p>Rating: <input type="text" name="rating" value="<%= skill.rating %>"autocomplete="off"> </p>
+      <button type="submit">Submit Changes</button>
+    </form>
+    <br>
+    <br>
+    <a href="./">Back to Skill #<%= skill.id %> details</a>
+  </body>
+
+</html>

@@ -9,12 +9,21 @@ module.exports = {
     getAll,
     getOne,
     create,
-    delete: deleteOne
+    delete: deleteOne,
+    update
 };
 
-function deleteOne(skill) {
-    skill = parseInt(skill);
-    let idx = skills.findIndex((x) => x.id === skill);
+function update(params, body) {
+    const id = parseInt(params);
+    let idx = skills.findIndex((x) => x.id === id);
+    for (let prop in body) {
+        skills[idx][prop] = body[prop]
+    }
+}
+
+function deleteOne(id) {
+    id = parseInt(id);
+    let idx = skills.findIndex((x) => x.id === id);
     skills.splice(idx,1);
 }
 
