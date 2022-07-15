@@ -8,6 +8,11 @@
     <h1>Skill #<%= skill.id%></h1>
     <h3><%= skill.desc %></h3>
     <h3>Rating: <%= skill.rating%></h3>
+    <form action="/skills/<%= skill.id%>?_method=DELETE"
+      class="delete-form" method="POST">
+      <button type="submit">Delete Skill</button>
+    </form>
+    <br>
     <br>
     <a href="./">Back to Skills</a>
   </body>
